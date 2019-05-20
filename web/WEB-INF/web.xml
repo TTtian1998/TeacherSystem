@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <welcome-file-list>
+        <welcome-file>jsp/login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <description>登录</description>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.tianZeXin.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>表格信息写入</description>
+        <servlet-name>TableServlet</servlet-name>
+        <servlet-class>com.tianZeXin.servlet.TableServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TableServlet</servlet-name>
+        <url-pattern>/TableServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>添加教师</description>
+        <servlet-name>AddServlet</servlet-name>
+        <servlet-class>com.tianZeXin.servlet.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddServlet</servlet-name>
+        <url-pattern>/AddServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>删除教师</description>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.tianZeXin.servlet.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>修改教师信息</description>
+        <servlet-name>ModifyServlet</servlet-name>
+        <servlet-class>com.tianZeXin.servlet.ModifyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyServlet</servlet-name>
+        <url-pattern>/ModifyServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>查看教师信息</description>
+        <servlet-name>ViewServlet</servlet-name>
+        <servlet-class>com.tianZeXin.servlet.ViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewServlet</servlet-name>
+        <url-pattern>/ViewServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>CommonFilter</filter-name>
+        <filter-class>com.tianZeXin.filter.CommonFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CommonFilter</filter-name>
+        <!--拦截所有请求-->
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

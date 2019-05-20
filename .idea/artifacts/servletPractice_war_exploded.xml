@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="servletPractice:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/servletPractice_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="servletPractice" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.38" />
+          <element id="file-copy" path="$PROJECT_DIR$/../studentSystem/web/WEB-INF/lib/json-lib-2.2.2-jdk15.jar" />
+          <element id="library" level="project" name="json-lib-2.2.2-jdk15" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="servletPractice/web/Web" />
+    </root>
+  </artifact>
+</component>
